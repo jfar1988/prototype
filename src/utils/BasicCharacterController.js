@@ -28,7 +28,7 @@ class BasicCharacterController {
 
   _LoadModels() {
     const loader = new FBXLoader();
-    loader.setPath("../src/assets/");
+    loader.setPath("/src/assets/");
     loader.load("robot1.fbx", (fbx) => {
       fbx.scale.setScalar(0.1);
       fbx.traverse((c) => {
