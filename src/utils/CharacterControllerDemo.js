@@ -156,6 +156,4 @@ class CharacterControllerDemo {
 
 const characterControllerDemo = new CharacterControllerDemo();
 
-export { characterControllerDemo };
-
-// export default CharacterControllerDemo; //TODO
+export { characterControllerDemo, CharacterControllerDemo };
