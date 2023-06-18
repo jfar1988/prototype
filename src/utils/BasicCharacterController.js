@@ -28,8 +28,8 @@ class BasicCharacterController {
 
   _LoadModels() {
     const loader = new FBXLoader();
-    // loader.setPath("");
-    loader.load("../../assets/robot1.fbx", (fbx) => {
+    loader.setPath("../../assets/");
+    loader.load("robot1.fbx", (fbx) => {
       fbx.scale.setScalar(0.1);
       fbx.traverse((c) => {
         c.castShadow = true;
@@ -56,14 +56,14 @@ class BasicCharacterController {
       };
 
       const loader = new FBXLoader(this._manager);
-      // loader.setPath("");
-      loader.load("../../assets/Walking.fbx", (a) => {
+      loader.setPath("../../assets/");
+      loader.load("Walking.fbx", (a) => {
         _OnLoad("walk", a);
       });
-      loader.load("../../assets/Running.fbx", (a) => {
+      loader.load("Running.fbx", (a) => {
         _OnLoad("run", a);
       });
-      loader.load("../../assets/Sad_Idle.fbx", (a) => {
+      loader.load("Sad_Idle.fbx", (a) => {
         _OnLoad("idle", a);
       });
     });

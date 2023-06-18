@@ -14,7 +14,7 @@ const Navbar = () => {
             to="/"
             className="text-white hover:text-gray-300 transition duration-300"
           >
-            <AiFillHome className="text-2xl" />
+            <AiFillHome className="text-xl hover:text-2xl" />
           </Link>
           <ul className="flex space-x-4">
             <li>
