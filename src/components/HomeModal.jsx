@@ -1,72 +1,31 @@
-import React, { useState } from "react";
-import { MdExitToApp } from "react-icons/md";
+import React from "react";
 
-import {
-  LeadingActions,
-  SwipeableList,
-  SwipeableListItem,
-  SwipeAction,
-} from "react-swipeable-list";
-import "react-swipeable-list/dist/styles.css";
-
-const HomeModal = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const leadingActions = () => (
-    <LeadingActions>
-      <SwipeAction
-        onClick={() => {
-          setShowModal(true);
-        }}
-        className="bg-blue-500 text-white p-2"
-      >
-        Home
-      </SwipeAction>
-    </LeadingActions>
-  );
+const HomeModal = ({ isOpen, onClose }) => {
   return (
-    <div className="flex justify-start">
-      {showModal && (
-        <div className="fixed top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2>Modal Home</h2>
-            {/* TODO agregar los campos Home */}
-            <button
-              className="absolute top-10 right-10 text-2xl"
-              onClick={() => setShowModal(false)}
-            >
-              <MdExitToApp />
-            </button>
-          </div>
-        </div>
-      )}
-
-      <div className="w-1/4">
-        <SwipeableList>
-          <SwipeableListItem
-            leadingActions={leadingActions()}
-            onSwipe={setShowModal}
+    <div
+      className={`fixed inset-0 flex items-center justify-end z-50 ${
+        isOpen ? "opacity-90" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <div
+        className={`absolute w-full h-screen shadow-lg transform transition-all duration-500 ${
+          isOpen ? "translate-x-0 bg-[#1f2937]" : "-translate-x-full"
+        }`}
+      >
+        <button
+          className="absolute top-0 right-0 p-4 text-3xl hover:font-bold "
+          onClick={onClose}
+        >
+          X
+        </button>
+        <div className="p-8 flex items-center justify-center">
+          <button
+            className="w-1/3 px-4 py-2 text-white font-bold bg-blue-500 rounded hover:bg-blue-600 "
+            onClick={onClose}
           >
-            <div className="relative z-0">
-              {showModal}
-              <div className="flex items-center justify-center h-14 cursor-pointer">
-                <div className="flex justify-center items-center w-9 h-9 bg-blue-500 rounded-full hover:bg-blue-600 hover:scale-105 transition-all duration-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h13M12 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </SwipeableListItem>
-        </SwipeableList>
+            Home
+          </button>
+        </div>
       </div>
     </div>
   );

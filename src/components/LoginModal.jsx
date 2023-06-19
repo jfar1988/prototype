@@ -1,43 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
+import LoginForm from "./LoginForm";
 
-const LoginModal = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [slidePosition, setSlidePosition] = useState(0);
-
-  const handleSlide = () => {
-    if (slidePosition === 0) {
-      setSlidePosition(-2000);
-      setShowModal(true);
-    } else {
-      setSlidePosition(0);
-      setTimeout(() => {
-        setShowModal(false);
-      }, 300);
-    }
-  };
-
+const LoginModal = ({ isOpen, onClose }) => {
   return (
-    <div>
-      <div className="fixed top-0 right-0 left-0">
-        <div
-          className="bg-gray-500 h-12 flex items-center justify-end"
-          onClick={handleSlide}
+    <div
+      className={`fixed inset-0 flex items-center justify-end z-50 ${
+        isOpen ? "opacity-90" : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <div
+        className={`absolute w-1/3 h-screen shadow-lg transform transition-all duration-500 ${
+          isOpen ? "translate-x-0 bg-[#1f2937]" : "translate-x-full"
+        }`}
+      >
+        <button
+          className="absolute top-0 right-0 p-4 text-3xl hover:font-bold "
+          onClick={onClose}
         >
-          <div
-            className="bg-white w-10 h-8 rounded-l-full cursor-pointer"
-            style={{ transform: `translateX(${slidePosition}%)` }}
-          ></div>
+          X
+        </button>
+        <div className="p-8">
+          <LoginForm onClose={onClose} />
         </div>
       </div>
-      {showModal && (
-        <div className="fixed top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2>Modal de inicio de sesión</h2>
-            {/* Aquí puedes agregar los campos de inicio de sesión */}
-            <button onClick={handleSlide}>Cerrar</button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
