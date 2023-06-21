@@ -9,16 +9,18 @@ const LoginModal = ({ isOpen, onClose }) => {
       }`}
     >
       <div
-        className={`absolute w-1/3 h-screen shadow-lg transform transition-all duration-500 ${
+        className={`absolute w-full sm:w-1/3 h-screen shadow-lg transform transition-all duration-500 ${
           isOpen ? "translate-x-0 bg-[#1f2937]" : "translate-x-full"
         }`}
       >
-        <button
-          className="absolute top-0 right-0 p-4 text-3xl hover:font-bold "
-          onClick={onClose}
-        >
-          X
-        </button>
+        <div>
+          <button
+            className="absolute top-0 right-0 p-4 text-xl font-bold hover:text-2xl "
+            onClick={onClose}
+          >
+            X
+          </button>
+        </div>
         <div className="p-8">
           <LoginForm onClose={onClose} />
         </div>

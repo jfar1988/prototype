@@ -16,7 +16,7 @@ class WalkState extends State {
 
       curAction.enabled = true;
 
-      if (prevState.Name == "run") {
+      if (prevState.Name === "run") {
         const ratio =
           curAction.getClip().duration / prevAction.getClip().duration;
         curAction.time = prevAction.time * ratio;

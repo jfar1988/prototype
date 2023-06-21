@@ -1,7 +1,5 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js";
-
 import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.118.1/examples/jsm/loaders/FBXLoader.js";
-
 import BasicCharacterControllerInput from "./BasicControllerInput";
 import CharacterFSM from "./CharacterFSM";
 import BasicCharacterControllerProxy from "./Proxy";
@@ -36,7 +34,9 @@ class BasicCharacterController {
       });
 
       this._target = fbx;
-      this._params.scene.add(this._target);
+      if (this._params.scene) {
+        this._params.scene.add(this._target);
+      }
 
       this._mixer = new THREE.AnimationMixer(this._target);
 
@@ -55,15 +55,15 @@ class BasicCharacterController {
         };
       };
 
-      const loader = new FBXLoader(this._manager);
-      loader.setPath("../../assets/");
-      loader.load("Walking.fbx", (a) => {
+      const loader2 = new FBXLoader(this._manager);
+      loader2.setPath("../../assets/");
+      loader2.load("Walking.fbx", (a) => {
         _OnLoad("walk", a);
       });
-      loader.load("Running.fbx", (a) => {
+      loader2.load("Running.fbx", (a) => {
         _OnLoad("run", a);
       });
-      loader.load("Sad_Idle.fbx", (a) => {
+      loader2.load("Sad_Idle.fbx", (a) => {
         _OnLoad("idle", a);
       });
     });
@@ -146,6 +146,10 @@ class BasicCharacterController {
     if (this._mixer) {
       this._mixer.update(timeInSeconds);
     }
+  }
+
+  getMixers() {
+    return this._mixer;
   }
 }
 
