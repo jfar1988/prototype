@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   const handleExportClick = () => {
-    window.open("../../public/assets/Running.fbx");
+    window.open("../../assets/Running.fbx");
   };
 
   return (
@@ -65,6 +65,7 @@ const Navbar = () => {
               <Link
                 to="/capture"
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
+                onClick={handleMenu}
               >
                 <img
                   src="../../assets/Icons/capture.svg"
@@ -175,6 +176,7 @@ const Navbar = () => {
                   <Link
                     to="/capture"
                     className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                    onClick={handleMenu}
                   >
                     <img
                       src="../../assets/Icons/capture.svg"
