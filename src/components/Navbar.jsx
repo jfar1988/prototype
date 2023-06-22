@@ -21,219 +21,224 @@ const Navbar = () => {
   };
 
   const handleClickChangeColor = () => {
-    setChangeColor(!menu);
+    setChangeColor(true);
   };
 
   const handleMenu = () => {
-    setMenu(true);
+    setMenu(!menu);
   };
 
   return (
     <Router>
-      <nav className="bg-gray-800 w-full py-4 px-8 fixed top-0 left-0 right-0 flex justify-end">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex sm:flex space-x-4">
-            <Link
-              to="/home"
-              className="text-white hover:text-gray-300 transition duration-300 hidden sm:block"
-              onClick={openModal}
-            >
-              <AiFillHome className="text-xl hover:text-2xl" />
-            </Link>
-          </div>
-          <div className="flex justify-center space-x-4">
-            <ul className="hidden sm:flex space-x-4">
-              <li className="flex items-center">
-                <Link
-                  to="/setting"
-                  className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
-                  onClick={handleClickChangeColor}
-                >
-                  <img
-                    src="../../assets/Icons/setting.svg"
-                    alt="Setting"
-                    className="h-6 w-6"
-                  />
-                  <span>Setting</span>
-                </Link>
-                <Controlls />
-              </li>
-              <li className="flex items-center">
-                <Link
-                  to="/capture"
-                  className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
-                >
-                  <img
-                    src="../../assets/capture.svg"
-                    alt="Capture"
-                    className="h-6 w-6"
-                  />
-                  <span>Capture</span>
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <Link
-                  to="/animations"
-                  className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
-                >
-                  <img
-                    src="../../assets/Icons/animations.svg"
-                    alt="Animations"
-                    className="h-6 w-6"
-                  />
-                  <span>Animations</span>
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <Link
-                  to="/edit"
-                  className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
-                >
-                  <img
-                    src="../../assets/Icons/edit.svg"
-                    alt="Edit"
-                    className="h-6 w-6"
-                  />
-                  <span>Edit</span>
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <Link
-                  to="/streaming"
-                  className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
-                >
-                  <img
-                    src="../../assets/Icons/streaming.svg"
-                    alt="Streaming"
-                    className="h-6 w-6"
-                  />
-                  <span>Streaming</span>
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <Link
-                  to="/export"
-                  className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
-                >
-                  <img
-                    src="../../assets/Icons/export.svg"
-                    alt="Export"
-                    className="h-6 w-6"
-                  />
-                  <span>Export</span>
-                </Link>
-              </li>
-            </ul>
-            {menu && (
-              <div className="md:hidden" id="mobile-menu">
-                <ul className="sm:hidden flex flex-col space-y-2">
-                  <li>
-                    <Link
-                      to="/home"
-                      className="text-white text-xl hover:text-2xl transition duration-300 flex items-center w-full"
-                      onClick={openModal}
-                    >
-                      <AiFillHome className="h-6 w-6" />
-                      <span className="ml-2">Home</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/login"
-                      className="text-white text-xl hover:text-2xl transition duration-300 flex items-center w-full"
-                      onClick={openModal}
-                    >
-                      <AiOutlineUser className="h-6 w-6" />
-                      <span className="ml-2">Login</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/setting"
-                      className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
-                      onClick={handleClickChangeColor}
-                    >
-                      <img
-                        src="../../assets/Icons/setting.svg"
-                        alt="Setting"
-                        className="h-6 w-6"
-                      />
-                      <span className="ml-2"> Setting</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/capture"
-                      className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
-                    >
-                      <img
-                        src="../../assets/capture.svg"
-                        alt="Capture"
-                        className="h-6 w-6"
-                      />
-                      <span className="ml-2"> Capture</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/animations"
-                      className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
-                    >
-                      <img
-                        src="../../assets/Icons/animations.svg"
-                        alt="Animations"
-                        className="h-6 w-6"
-                      />
-                      <span className="ml-2"> Animations</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/edit"
-                      className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
-                    >
-                      <img
-                        src="../../assets/Icons/edit.svg"
-                        alt="Edit"
-                        className="h-6 w-6"
-                      />
-                      <span className="ml-2"> Edit</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/streaming"
-                      className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
-                    >
-                      <img
-                        src="../../assets/Icons/streaming.svg"
-                        alt="Streaming"
-                        className="h-6 w-6"
-                      />
-                      <span className="ml-2"> Streaming</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/export"
-                      className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
-                    >
-                      <img
-                        src="../../assets/Icons/export.svg"
-                        alt="Export"
-                        className="h-6 w-6"
-                      />
-                      <span className="ml-2"> Export</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
+      <nav className="bg-gray-800 py-4 px-8 fixed top-0 left-0 right-0 flex justify-end">
+        <Link
+          to="/home"
+          className="text-white hover:text-gray-300 transition duration-300 hidden sm:block"
+          onClick={openModal}
+        >
+          <AiFillHome className="text-xl hover:text-2xl" />
+        </Link>
 
-            <div className="sm:hidden">
+        <div className="flex justify-center space-x-4 w-full">
+          <ul className="hidden sm:flex space-x-4 ">
+            <li className="flex items-center ">
+              <Link
+                to="/setting"
+                className="text-white hover:text-gray-300 transition duration-300 flex items-center justify-center gap-2"
+                onClick={handleClickChangeColor}
+              >
+                <img
+                  src="../../assets/Icons/setting.svg"
+                  alt="Setting"
+                  className="h-6 w-6"
+                />
+                <span>Setting</span>
+              </Link>
+              <Controlls />
+            </li>
+            <li className="flex items-center">
+              <Link
+                to="/capture"
+                className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
+              >
+                <img
+                  src="../../assets/Icons/capture.svg"
+                  alt="Capture"
+                  className="h-6 w-6"
+                />
+                <span>Capture</span>
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link
+                to="/animations"
+                className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
+              >
+                <img
+                  src="../../assets/Icons/animations.svg"
+                  alt="Animations"
+                  className="h-6 w-6"
+                />
+                <span>Animations</span>
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link
+                to="/edit"
+                className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
+              >
+                <img
+                  src="../../assets/Icons/edit.svg"
+                  alt="Edit"
+                  className="h-6 w-6"
+                />
+                <span>Edit</span>
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link
+                to="/streaming"
+                className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
+              >
+                <img
+                  src="../../assets/Icons/streaming.svg"
+                  alt="Streaming"
+                  className="h-6 w-6"
+                />
+                <span>Streaming</span>
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link
+                to="/export"
+                className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
+              >
+                <img
+                  src="../../assets/Icons/export.svg"
+                  alt="Export"
+                  className="h-6 w-6"
+                />
+                <span>Export</span>
+              </Link>
+            </li>
+          </ul>
+          {menu && (
+            <div className="md:hidden w-full" id="mobile-menu">
+              <div
+                onClick={handleMenu}
+                className="flex justify-end text-2xl cursor-pointer hover:text-3xl"
+              >
+                X
+              </div>
+              <ul className="sm:hidden flex flex-col space-y-2 ">
+                <li>
+                  <Link
+                    to="/home"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                    onClick={openModal}
+                  >
+                    <AiFillHome className="h-6 w-6" />
+                    <span className="ml-2">Home</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/login"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                    onClick={openModal}
+                  >
+                    <AiOutlineUser className="h-6 w-6" />
+                    <span className="ml-2">Login</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/setting"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                    onClick={handleClickChangeColor}
+                  >
+                    <img
+                      src="../../assets/Icons/setting.svg"
+                      alt="Setting"
+                      className="h-6 w-6"
+                    />
+                    <span className="ml-2"> Setting</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/capture"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                  >
+                    <img
+                      src="../../assets/Icons/capture.svg"
+                      alt="Capture"
+                      className="h-6 w-6"
+                    />
+                    <span className="ml-2"> Capture</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/animations"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                  >
+                    <img
+                      src="../../assets/Icons/animations.svg"
+                      alt="Animations"
+                      className="h-6 w-6"
+                    />
+                    <span className="ml-2"> Animations</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/edit"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                  >
+                    <img
+                      src="../../assets/Icons/edit.svg"
+                      alt="Edit"
+                      className="h-6 w-6"
+                    />
+                    <span className="ml-2"> Edit</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/streaming"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                  >
+                    <img
+                      src="../../assets/Icons/streaming.svg"
+                      alt="Streaming"
+                      className="h-6 w-6"
+                    />
+                    <span className="ml-2"> Streaming</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/export"
+                    className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                  >
+                    <img
+                      src="../../assets/Icons/export.svg"
+                      alt="Export"
+                      className="h-6 w-6"
+                    />
+                    <span className="ml-2"> Export</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {!menu && (
+            <div className="sm:hidden w-full flex justify-end items-end">
               <button
                 className="text-white hover:text-gray-300 transition duration-300"
-                onClick={() => setMenu(!menu)}
+                onClick={handleMenu}
               >
                 <svg
                   className="w-6 h-6"
@@ -251,14 +256,15 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
-          </div>
-          <Link
-            to="/login"
-            className="text-white text-xl hover:text-2xl transition duration-300 hidden sm:block"
-          >
-            <AiOutlineUser onClick={openModal} />
-          </Link>
+          )}
         </div>
+
+        <Link
+          to="/login"
+          className="text-white text-xl hover:text-2xl transition duration-300 hidden sm:block"
+        >
+          <AiOutlineUser onClick={openModal} />
+        </Link>
       </nav>
       <Routes>
         <Route
