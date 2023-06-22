@@ -22,10 +22,15 @@ const Navbar = () => {
 
   const handleClickChangeColor = () => {
     setChangeColor(true);
+    setMenu(!menu);
   };
 
   const handleMenu = () => {
     setMenu(!menu);
+  };
+
+  const handleExportClick = () => {
+    window.open("../../public/assets/Running.fbx");
   };
 
   return (
@@ -112,6 +117,7 @@ const Navbar = () => {
               <Link
                 to="/export"
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
+                onClick={handleExportClick}
               >
                 <img
                   src="../../assets/Icons/export.svg"
@@ -221,6 +227,7 @@ const Navbar = () => {
                   <Link
                     to="/export"
                     className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
+                    onClick={handleExportClick}
                   >
                     <img
                       src="../../assets/Icons/export.svg"

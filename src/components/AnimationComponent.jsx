@@ -133,10 +133,6 @@ const AnimationComponent = () => {
       characterFSM.Reset();
     }
 
-    // Reiniciar cualquier otro estado o valores relevantes de la escena
-    // ...
-
-    // Reiniciar la posición de la cámara
     camera.position.set(20, 10, 50);
 
     // Reiniciar los controles de órbita
@@ -192,7 +188,6 @@ const AnimationComponent = () => {
       <Footer
         resumeAnimation={resumeAnimation}
         reverseAnimation={reverseAnimation}
-        stopAnimation={stopAnimation}
         toggleAnimation={toggleAnimation}
         back_Frame={back_Frame}
         forward_Frame={forward_Frame}

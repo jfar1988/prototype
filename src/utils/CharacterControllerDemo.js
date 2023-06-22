@@ -19,7 +19,7 @@ class CharacterControllerDemo {
     this._threejs.setSize(window.innerWidth, window.innerHeight);
     this._currentAction = null;
 
-    let color = (this.color = 0xff5733);
+    let color = (this.color = 0x4d2b17);
     this._threejs.setClearColor(color);
 
     document.body.appendChild(this._threejs.domElement);

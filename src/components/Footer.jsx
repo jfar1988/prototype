@@ -10,14 +10,6 @@ const Footer = ({
   return (
     <div className="fixed bottom-0 left-0 w-full bg-gray-800 py-3 flex justify-center">
       <div className="bottom-play-center flex gap-x-10">
-        <button className="button-play" id="last-frame" title="Last Frame">
-          <i className="fas fa-circle"></i>
-          <img
-            src="../../assets/Icons/last-frame.svg"
-            className="w-5"
-            alt="last-frame"
-          />
-        </button>
         <button
           className="button-play"
           id="back-frame"
@@ -68,18 +60,6 @@ const Footer = ({
             src="../../assets/Icons/frame-forward.svg"
             className="w-5"
             alt="frame-forward"
-          />
-        </button>
-        <button
-          className="button-play"
-          id="frame-at-start"
-          title="Frame At Start"
-        >
-          <i className="fas fa-circle"></i>
-          <img
-            src="../../assets/Icons/frame-at-start.svg"
-            className="w-5"
-            alt="frame-at-start"
           />
         </button>
         <button
