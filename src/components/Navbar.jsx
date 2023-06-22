@@ -50,7 +50,7 @@ const Navbar = () => {
                   onClick={handleClickChangeColor}
                 >
                   <img
-                    src="/public/assets/Icons/setting.svg"
+                    src="../../assets/Icons/setting.svg"
                     alt="Setting"
                     className="h-6 w-6"
                   />
@@ -64,7 +64,7 @@ const Navbar = () => {
                   className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
                 >
                   <img
-                    src="/public/assets/Icons/Capture.svg"
+                    src="../../assets/capture.svg"
                     alt="Capture"
                     className="h-6 w-6"
                   />
@@ -77,7 +77,7 @@ const Navbar = () => {
                   className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
                 >
                   <img
-                    src="/public/assets/Icons/animations.svg"
+                    src="../../assets/Icons/animations.svg"
                     alt="Animations"
                     className="h-6 w-6"
                   />
@@ -90,7 +90,7 @@ const Navbar = () => {
                   className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
                 >
                   <img
-                    src="/public/assets/Icons/edit.svg"
+                    src="../../assets/Icons/edit.svg"
                     alt="Edit"
                     className="h-6 w-6"
                   />
@@ -103,7 +103,7 @@ const Navbar = () => {
                   className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
                 >
                   <img
-                    src="/public/assets/Icons/streaming.svg"
+                    src="../../assets/Icons/streaming.svg"
                     alt="Streaming"
                     className="h-6 w-6"
                   />
@@ -116,7 +116,7 @@ const Navbar = () => {
                   className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
                 >
                   <img
-                    src="/public/assets/Icons/export.svg"
+                    src="../../assets/Icons/export.svg"
                     alt="Export"
                     className="h-6 w-6"
                   />
@@ -154,7 +154,7 @@ const Navbar = () => {
                       onClick={handleClickChangeColor}
                     >
                       <img
-                        src="/public/assets/Icons/setting.svg"
+                        src="../../assets/Icons/setting.svg"
                         alt="Setting"
                         className="h-6 w-6"
                       />
@@ -167,7 +167,7 @@ const Navbar = () => {
                       className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
                     >
                       <img
-                        src="/public/assets/Icons/Capture.svg"
+                        src="../../assets/capture.svg"
                         alt="Capture"
                         className="h-6 w-6"
                       />
@@ -180,7 +180,7 @@ const Navbar = () => {
                       className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
                     >
                       <img
-                        src="/public/assets/Icons/animations.svg"
+                        src="../../assets/Icons/animations.svg"
                         alt="Animations"
                         className="h-6 w-6"
                       />
@@ -193,7 +193,7 @@ const Navbar = () => {
                       className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
                     >
                       <img
-                        src="/public/assets/Icons/edit.svg"
+                        src="../../assets/Icons/edit.svg"
                         alt="Edit"
                         className="h-6 w-6"
                       />
@@ -206,7 +206,7 @@ const Navbar = () => {
                       className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
                     >
                       <img
-                        src="/public/assets/Icons/streaming.svg"
+                        src="../../assets/Icons/streaming.svg"
                         alt="Streaming"
                         className="h-6 w-6"
                       />
@@ -219,7 +219,7 @@ const Navbar = () => {
                       className="text-white hover:text-gray-300 transition duration-300 flex items-center w-full"
                     >
                       <img
-                        src="/public/assets/Icons/export.svg"
+                        src="../../assets/Icons/export.svg"
                         alt="Export"
                         className="h-6 w-6"
                       />

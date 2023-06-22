@@ -13,7 +13,7 @@ const Footer = ({
         <button className="button-play" id="last-frame" title="Last Frame">
           <i className="fas fa-circle"></i>
           <img
-            src="../../public/assets/Icons/last-frame.svg"
+            src="../../assets/Icons/last-frame.svg"
             className="w-5"
             alt="last-frame"
           />
@@ -26,7 +26,7 @@ const Footer = ({
         >
           <i className="fas fa-circle"></i>
           <img
-            src="../../public/assets/Icons/back-frame.svg"
+            src="../../assets/Icons/back-frame.svg"
             className="w-5"
             alt="back-frame"
           />
@@ -39,7 +39,7 @@ const Footer = ({
         >
           <i className="fas fa-circle"></i>
           <img
-            src="../../public/assets/Icons/reverse-pause.svg"
+            src="../../assets/Icons/reverse-pause.svg"
             className="w-5"
             alt="reverse.pause"
           />
@@ -52,7 +52,7 @@ const Footer = ({
         >
           <i className="fas fa-circle"></i>
           <img
-            src="../../public/assets/Icons/play-pause.svg"
+            src="../../assets/Icons/play-pause.svg"
             className="w-5"
             alt="play-pause"
           />
@@ -65,7 +65,7 @@ const Footer = ({
         >
           <i className="fas fa-circle"></i>
           <img
-            src="../../public/assets/Icons/frame-forward.svg"
+            src="../../assets/Icons/frame-forward.svg"
             className="w-5"
             alt="frame-forward"
           />
@@ -77,7 +77,7 @@ const Footer = ({
         >
           <i className="fas fa-circle"></i>
           <img
-            src="../../public/assets/Icons/frame-at-start.svg"
+            src="../../assets/Icons/frame-at-start.svg"
             className="w-5"
             alt="frame-at-start"
           />
@@ -89,11 +89,7 @@ const Footer = ({
           onClick={resumeAnimation}
         >
           <i className="fas fa-circle"></i>
-          <img
-            src="../../public/assets/Icons/loop.svg"
-            className="w-5"
-            alt="loop"
-          />
+          <img src="../../assets/Icons/loop.svg" className="w-5" alt="loop" />
         </button>
       </div>
     </div>
