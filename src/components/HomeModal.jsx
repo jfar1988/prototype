@@ -1,4 +1,5 @@
 import React from "react";
+import SearchWiki from "./SearchWiki";
 
 const HomeModal = ({ isOpen, onClose }) => {
   return (
@@ -21,12 +22,7 @@ const HomeModal = ({ isOpen, onClose }) => {
           </button>
         </div>
         <div className="p-8 pt-[4rem] flex items-center justify-center">
-          <button
-            className="w-1/3 px-4 py-2 text-white font-bold bg-blue-500 rounded hover:bg-blue-600 "
-            onClick={onClose}
-          >
-            Home
-          </button>
+          <SearchWiki />
         </div>
       </div>
     </div>
