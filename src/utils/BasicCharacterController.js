@@ -27,7 +27,7 @@ class BasicCharacterController {
   _LoadModels() {
     const loader = new FBXLoader();
     loader.setPath("../../assets/");
-    loader.load("robot1.fbx", (fbx) => {
+    loader.load("character.fbx", (fbx) => {
       fbx.scale.setScalar(0.1);
       fbx.traverse((c) => {
         c.castShadow = true;
@@ -63,7 +63,7 @@ class BasicCharacterController {
       loader2.load("Running.fbx", (a) => {
         _OnLoad("run", a);
       });
-      loader2.load("Sad_Idle.fbx", (a) => {
+      loader2.load("Idle.fbx", (a) => {
         _OnLoad("idle", a);
       });
     });
