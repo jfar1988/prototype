@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const LoginForm = ({ onClose }) => {
+const LoginForm = ({ modalLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showError, setShowError] = useState(false);
@@ -18,7 +18,7 @@ const LoginForm = ({ onClose }) => {
     if (email.trim() === "" || password.trim() === "") {
       setShowError(true);
     } else {
-      onClose();
+      modalLogin();
     }
   };
 

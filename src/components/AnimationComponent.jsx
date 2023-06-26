@@ -183,8 +183,7 @@ const AnimationComponent = () => {
   };
 
   return (
-    <>
-      <div ref={mountRef} />
+    <div ref={mountRef}>
       <Footer
         resumeAnimation={resumeAnimation}
         reverseAnimation={reverseAnimation}
@@ -192,7 +191,7 @@ const AnimationComponent = () => {
         back_Frame={back_Frame}
         forward_Frame={forward_Frame}
       />
-    </>
+    </div>
   );
 };
 

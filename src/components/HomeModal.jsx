@@ -1,7 +1,7 @@
 import React from "react";
 import SearchWiki from "./SearchWiki";
 
-const HomeModal = ({ isOpen, onClose }) => {
+const HomeModal = () => {
   return (
     <div
       className={`fixed inset-0 flex items-center justify-end z-50 ${
