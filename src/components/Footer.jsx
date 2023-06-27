@@ -16,7 +16,6 @@ const Footer = ({
           title="Back Frame"
           onClick={() => back_Frame(true)}
         >
-          <i className="fas fa-circle"></i>
           <img
             src="../../assets/Icons/back-frame.svg"
             className="w-5"
@@ -29,7 +28,6 @@ const Footer = ({
           title="Reverse Pause"
           onClick={reverseAnimation}
         >
-          <i className="fas fa-circle"></i>
           <img
             src="../../assets/Icons/reverse-pause.svg"
             className="w-5"
@@ -42,7 +40,6 @@ const Footer = ({
           id="play-pause"
           title="Play Pause"
         >
-          <i className="fas fa-circle"></i>
           <img
             src="../../assets/Icons/play-pause.svg"
             className="w-5"
@@ -55,7 +52,6 @@ const Footer = ({
           title="Frame Forward"
           onClick={() => forward_Frame(true)}
         >
-          <i className="fas fa-circle"></i>
           <img
             src="../../assets/Icons/frame-forward.svg"
             className="w-5"
@@ -68,7 +64,6 @@ const Footer = ({
           title="Loop"
           onClick={resumeAnimation}
         >
-          <i className="fas fa-circle"></i>
           <img src="../../assets/Icons/loop.svg" className="w-5" alt="loop" />
         </button>
       </div>

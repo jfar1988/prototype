@@ -54,12 +54,8 @@ const Navbar = () => {
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center justify-center gap-2"
                 onClick={handleClickChangeColor}
               >
-                <img
-                  src="../../assets/Icons/setting.svg"
-                  alt="Setting"
-                  className="h-6 w-6"
-                />
-                <span>Setting</span>
+                <i className="fa-solid fa-droplet"></i>
+                <span>Color</span>
               </Link>
               <Controlls />
             </li>
@@ -69,11 +65,7 @@ const Navbar = () => {
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
                 onClick={handleMenu}
               >
-                <img
-                  src="../../assets/Icons/capture.svg"
-                  alt="Capture"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-gear"></i>
                 <span>Capture</span>
               </Link>
             </li>
@@ -82,11 +74,7 @@ const Navbar = () => {
                 to="/animations"
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
               >
-                <img
-                  src="../../assets/Icons/animations.svg"
-                  alt="Animations"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-ghost"></i>
                 <span>Animations</span>
               </Link>
             </li>
@@ -95,11 +83,7 @@ const Navbar = () => {
                 to="/edit"
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
               >
-                <img
-                  src="../../assets/Icons/edit.svg"
-                  alt="Edit"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-person-through-window"></i>
                 <span>Edit</span>
               </Link>
             </li>
@@ -108,11 +92,7 @@ const Navbar = () => {
                 to="/streaming"
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
               >
-                <img
-                  src="../../assets/Icons/streaming.svg"
-                  alt="Streaming"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-mug-hot"></i>
                 <span>Streaming</span>
               </Link>
             </li>
@@ -122,11 +102,7 @@ const Navbar = () => {
                 className="text-white hover:text-gray-300 transition duration-300 flex items-center gap-2"
                 onClick={handleExportClick}
               >
-                <img
-                  src="../../assets/Icons/export.svg"
-                  alt="Export"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-download"></i>
                 <span>Export</span>
               </Link>
             </li>
@@ -142,77 +118,59 @@ const Navbar = () => {
             </li>
             <li>
               <Link
+                title="Color"
                 to="/setting"
                 className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
                 onClick={handleClickChangeColor}
               >
-                <img
-                  src="../../assets/Icons/setting.svg"
-                  alt="Setting"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-droplet"></i>
               </Link>
             </li>
             <li>
               <Link
                 to="/capture"
+                title="Capture"
                 className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
                 onClick={handleMenu}
               >
-                <img
-                  src="../../assets/Icons/capture.svg"
-                  alt="Capture"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-gear"></i>
               </Link>
             </li>
             <li>
               <Link
                 to="/animations"
+                title="animations"
                 className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
               >
-                <img
-                  src="../../assets/Icons/animations.svg"
-                  alt="Animations"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-ghost"></i>
               </Link>
             </li>
             <li>
               <Link
                 to="/edit"
+                title="Edit"
                 className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
               >
-                <img
-                  src="../../assets/Icons/edit.svg"
-                  alt="Edit"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-person-through-window"></i>
               </Link>
             </li>
             <li>
               <Link
                 to="/streaming"
+                title="Streaming"
                 className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
               >
-                <img
-                  src="../../assets/Icons/streaming.svg"
-                  alt="Streaming"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-mug-hot"></i>
               </Link>
             </li>
             <li>
               <Link
                 to="/export"
+                title="Export"
                 className="text-white text-xl hover:text-2xl transition duration-300 flex items-center justify-center gap-2 pt-1"
                 onClick={handleExportClick}
               >
-                <img
-                  src="../../assets/Icons/export.svg"
-                  alt="Export"
-                  className="h-6 w-6"
-                />
+                <i className="fa-solid fa-download"></i>
               </Link>
             </li>
             <Link
